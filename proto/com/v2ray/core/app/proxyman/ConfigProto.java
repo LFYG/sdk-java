@@ -6990,6 +6990,1685 @@ public final class ConfigProto {
 
   }
 
+  public interface MultiplexingConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v2ray.core.app.proxyman.MultiplexingConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool enabled = 1;</code>
+     */
+    boolean getEnabled();
+  }
+  /**
+   * Protobuf type {@code v2ray.core.app.proxyman.MultiplexingConfig}
+   */
+  public  static final class MultiplexingConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v2ray.core.app.proxyman.MultiplexingConfig)
+      MultiplexingConfigOrBuilder {
+    // Use MultiplexingConfig.newBuilder() to construct.
+    private MultiplexingConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MultiplexingConfig() {
+      enabled_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private MultiplexingConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_MultiplexingConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.class, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <code>optional bool enabled = 1;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig)) {
+        return super.equals(obj);
+      }
+      com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig other = (com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig) obj;
+
+      boolean result = true;
+      result = result && (getEnabled()
+          == other.getEnabled());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v2ray.core.app.proxyman.MultiplexingConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v2ray.core.app.proxyman.MultiplexingConfig)
+        com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_MultiplexingConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.class, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder.class);
+      }
+
+      // Construct using com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getDefaultInstanceForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.getDefaultInstance();
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig build() {
+        com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig buildPartial() {
+        com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig result = new com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig(this);
+        result.enabled_ = enabled_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig) {
+          return mergeFrom((com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig other) {
+        if (other == com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <code>optional bool enabled = 1;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <code>optional bool enabled = 1;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool enabled = 1;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v2ray.core.app.proxyman.MultiplexingConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v2ray.core.app.proxyman.MultiplexingConfig)
+    private static final com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig();
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MultiplexingConfig>
+        PARSER = new com.google.protobuf.AbstractParser<MultiplexingConfig>() {
+      public MultiplexingConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new MultiplexingConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MultiplexingConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MultiplexingConfig> getParserForType() {
+      return PARSER;
+    }
+
+    public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DispatchConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v2ray.core.app.proxyman.DispatchConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    boolean hasMuxSettings();
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getMuxSettings();
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder getMuxSettingsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code v2ray.core.app.proxyman.DispatchConfig}
+   */
+  public  static final class DispatchConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v2ray.core.app.proxyman.DispatchConfig)
+      DispatchConfigOrBuilder {
+    // Use DispatchConfig.newBuilder() to construct.
+    private DispatchConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DispatchConfig() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private DispatchConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder subBuilder = null;
+              if (muxSettings_ != null) {
+                subBuilder = muxSettings_.toBuilder();
+              }
+              muxSettings_ = input.readMessage(com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(muxSettings_);
+                muxSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_DispatchConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.class, com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.Builder.class);
+    }
+
+    public static final int MUX_SETTINGS_FIELD_NUMBER = 1;
+    private com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig muxSettings_;
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    public boolean hasMuxSettings() {
+      return muxSettings_ != null;
+    }
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getMuxSettings() {
+      return muxSettings_ == null ? com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.getDefaultInstance() : muxSettings_;
+    }
+    /**
+     * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+     */
+    public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder getMuxSettingsOrBuilder() {
+      return getMuxSettings();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (muxSettings_ != null) {
+        output.writeMessage(1, getMuxSettings());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (muxSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMuxSettings());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig)) {
+        return super.equals(obj);
+      }
+      com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig other = (com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig) obj;
+
+      boolean result = true;
+      result = result && (hasMuxSettings() == other.hasMuxSettings());
+      if (hasMuxSettings()) {
+        result = result && getMuxSettings()
+            .equals(other.getMuxSettings());
+      }
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      if (hasMuxSettings()) {
+        hash = (37 * hash) + MUX_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getMuxSettings().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v2ray.core.app.proxyman.DispatchConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v2ray.core.app.proxyman.DispatchConfig)
+        com.v2ray.core.app.proxyman.ConfigProto.DispatchConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_DispatchConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.class, com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.Builder.class);
+      }
+
+      // Construct using com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (muxSettingsBuilder_ == null) {
+          muxSettings_ = null;
+        } else {
+          muxSettings_ = null;
+          muxSettingsBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig getDefaultInstanceForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.getDefaultInstance();
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig build() {
+        com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig buildPartial() {
+        com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig result = new com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig(this);
+        if (muxSettingsBuilder_ == null) {
+          result.muxSettings_ = muxSettings_;
+        } else {
+          result.muxSettings_ = muxSettingsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig) {
+          return mergeFrom((com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig other) {
+        if (other == com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig.getDefaultInstance()) return this;
+        if (other.hasMuxSettings()) {
+          mergeMuxSettings(other.getMuxSettings());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig muxSettings_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder> muxSettingsBuilder_;
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public boolean hasMuxSettings() {
+        return muxSettingsBuilder_ != null || muxSettings_ != null;
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig getMuxSettings() {
+        if (muxSettingsBuilder_ == null) {
+          return muxSettings_ == null ? com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.getDefaultInstance() : muxSettings_;
+        } else {
+          return muxSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public Builder setMuxSettings(com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig value) {
+        if (muxSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          muxSettings_ = value;
+          onChanged();
+        } else {
+          muxSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public Builder setMuxSettings(
+          com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder builderForValue) {
+        if (muxSettingsBuilder_ == null) {
+          muxSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          muxSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public Builder mergeMuxSettings(com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig value) {
+        if (muxSettingsBuilder_ == null) {
+          if (muxSettings_ != null) {
+            muxSettings_ =
+              com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.newBuilder(muxSettings_).mergeFrom(value).buildPartial();
+          } else {
+            muxSettings_ = value;
+          }
+          onChanged();
+        } else {
+          muxSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public Builder clearMuxSettings() {
+        if (muxSettingsBuilder_ == null) {
+          muxSettings_ = null;
+          onChanged();
+        } else {
+          muxSettings_ = null;
+          muxSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder getMuxSettingsBuilder() {
+        
+        onChanged();
+        return getMuxSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      public com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder getMuxSettingsOrBuilder() {
+        if (muxSettingsBuilder_ != null) {
+          return muxSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return muxSettings_ == null ?
+              com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.getDefaultInstance() : muxSettings_;
+        }
+      }
+      /**
+       * <code>optional .v2ray.core.app.proxyman.MultiplexingConfig mux_settings = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder> 
+          getMuxSettingsFieldBuilder() {
+        if (muxSettingsBuilder_ == null) {
+          muxSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfig.Builder, com.v2ray.core.app.proxyman.ConfigProto.MultiplexingConfigOrBuilder>(
+                  getMuxSettings(),
+                  getParentForChildren(),
+                  isClean());
+          muxSettings_ = null;
+        }
+        return muxSettingsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v2ray.core.app.proxyman.DispatchConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:v2ray.core.app.proxyman.DispatchConfig)
+    private static final com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig();
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DispatchConfig>
+        PARSER = new com.google.protobuf.AbstractParser<DispatchConfig>() {
+      public DispatchConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DispatchConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DispatchConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DispatchConfig> getParserForType() {
+      return PARSER;
+    }
+
+    public com.v2ray.core.app.proxyman.ConfigProto.DispatchConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SessionFrameOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:v2ray.core.app.proxyman.SessionFrame)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 id = 1;</code>
+     */
+    int getId();
+
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    boolean hasTarget();
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    com.v2ray.core.common.net.DestinationProto.Endpoint getTarget();
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder getTargetOrBuilder();
+
+    /**
+     * <code>optional bytes payload = 3;</code>
+     */
+    com.google.protobuf.ByteString getPayload();
+  }
+  /**
+   * Protobuf type {@code v2ray.core.app.proxyman.SessionFrame}
+   */
+  public  static final class SessionFrame extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:v2ray.core.app.proxyman.SessionFrame)
+      SessionFrameOrBuilder {
+    // Use SessionFrame.newBuilder() to construct.
+    private SessionFrame(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SessionFrame() {
+      id_ = 0;
+      payload_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private SessionFrame(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              id_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.v2ray.core.common.net.DestinationProto.Endpoint.Builder subBuilder = null;
+              if (target_ != null) {
+                subBuilder = target_.toBuilder();
+              }
+              target_ = input.readMessage(com.v2ray.core.common.net.DestinationProto.Endpoint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(target_);
+                target_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+
+              payload_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_SessionFrame_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.class, com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional uint32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    public static final int TARGET_FIELD_NUMBER = 2;
+    private com.v2ray.core.common.net.DestinationProto.Endpoint target_;
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    public boolean hasTarget() {
+      return target_ != null;
+    }
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    public com.v2ray.core.common.net.DestinationProto.Endpoint getTarget() {
+      return target_ == null ? com.v2ray.core.common.net.DestinationProto.Endpoint.getDefaultInstance() : target_;
+    }
+    /**
+     * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+     */
+    public com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder getTargetOrBuilder() {
+      return getTarget();
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString payload_;
+    /**
+     * <code>optional bytes payload = 3;</code>
+     */
+    public com.google.protobuf.ByteString getPayload() {
+      return payload_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0) {
+        output.writeUInt32(1, id_);
+      }
+      if (target_ != null) {
+        output.writeMessage(2, getTarget());
+      }
+      if (!payload_.isEmpty()) {
+        output.writeBytes(3, payload_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, id_);
+      }
+      if (target_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTarget());
+      }
+      if (!payload_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, payload_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.v2ray.core.app.proxyman.ConfigProto.SessionFrame)) {
+        return super.equals(obj);
+      }
+      com.v2ray.core.app.proxyman.ConfigProto.SessionFrame other = (com.v2ray.core.app.proxyman.ConfigProto.SessionFrame) obj;
+
+      boolean result = true;
+      result = result && (getId()
+          == other.getId());
+      result = result && (hasTarget() == other.hasTarget());
+      if (hasTarget()) {
+        result = result && getTarget()
+            .equals(other.getTarget());
+      }
+      result = result && getPayload()
+          .equals(other.getPayload());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      if (hasTarget()) {
+        hash = (37 * hash) + TARGET_FIELD_NUMBER;
+        hash = (53 * hash) + getTarget().hashCode();
+      }
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.v2ray.core.app.proxyman.ConfigProto.SessionFrame prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code v2ray.core.app.proxyman.SessionFrame}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:v2ray.core.app.proxyman.SessionFrame)
+        com.v2ray.core.app.proxyman.ConfigProto.SessionFrameOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_SessionFrame_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.class, com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.Builder.class);
+      }
+
+      // Construct using com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+
+        if (targetBuilder_ == null) {
+          target_ = null;
+        } else {
+          target_ = null;
+          targetBuilder_ = null;
+        }
+        payload_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.SessionFrame getDefaultInstanceForType() {
+        return com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.getDefaultInstance();
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.SessionFrame build() {
+        com.v2ray.core.app.proxyman.ConfigProto.SessionFrame result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.v2ray.core.app.proxyman.ConfigProto.SessionFrame buildPartial() {
+        com.v2ray.core.app.proxyman.ConfigProto.SessionFrame result = new com.v2ray.core.app.proxyman.ConfigProto.SessionFrame(this);
+        result.id_ = id_;
+        if (targetBuilder_ == null) {
+          result.target_ = target_;
+        } else {
+          result.target_ = targetBuilder_.build();
+        }
+        result.payload_ = payload_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.v2ray.core.app.proxyman.ConfigProto.SessionFrame) {
+          return mergeFrom((com.v2ray.core.app.proxyman.ConfigProto.SessionFrame)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.v2ray.core.app.proxyman.ConfigProto.SessionFrame other) {
+        if (other == com.v2ray.core.app.proxyman.ConfigProto.SessionFrame.getDefaultInstance()) return this;
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (other.hasTarget()) {
+          mergeTarget(other.getTarget());
+        }
+        if (other.getPayload() != com.google.protobuf.ByteString.EMPTY) {
+          setPayload(other.getPayload());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.v2ray.core.app.proxyman.ConfigProto.SessionFrame parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.v2ray.core.app.proxyman.ConfigProto.SessionFrame) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>optional uint32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional uint32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.v2ray.core.common.net.DestinationProto.Endpoint target_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.v2ray.core.common.net.DestinationProto.Endpoint, com.v2ray.core.common.net.DestinationProto.Endpoint.Builder, com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder> targetBuilder_;
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public boolean hasTarget() {
+        return targetBuilder_ != null || target_ != null;
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public com.v2ray.core.common.net.DestinationProto.Endpoint getTarget() {
+        if (targetBuilder_ == null) {
+          return target_ == null ? com.v2ray.core.common.net.DestinationProto.Endpoint.getDefaultInstance() : target_;
+        } else {
+          return targetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public Builder setTarget(com.v2ray.core.common.net.DestinationProto.Endpoint value) {
+        if (targetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          targetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public Builder setTarget(
+          com.v2ray.core.common.net.DestinationProto.Endpoint.Builder builderForValue) {
+        if (targetBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          targetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public Builder mergeTarget(com.v2ray.core.common.net.DestinationProto.Endpoint value) {
+        if (targetBuilder_ == null) {
+          if (target_ != null) {
+            target_ =
+              com.v2ray.core.common.net.DestinationProto.Endpoint.newBuilder(target_).mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          targetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public Builder clearTarget() {
+        if (targetBuilder_ == null) {
+          target_ = null;
+          onChanged();
+        } else {
+          target_ = null;
+          targetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public com.v2ray.core.common.net.DestinationProto.Endpoint.Builder getTargetBuilder() {
+        
+        onChanged();
+        return getTargetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      public com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder getTargetOrBuilder() {
+        if (targetBuilder_ != null) {
+          return targetBuilder_.getMessageOrBuilder();
+        } else {
+          return target_ == null ?
+              com.v2ray.core.common.net.DestinationProto.Endpoint.getDefaultInstance() : target_;
+        }
+      }
+      /**
+       * <code>optional .v2ray.core.common.net.Endpoint target = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.v2ray.core.common.net.DestinationProto.Endpoint, com.v2ray.core.common.net.DestinationProto.Endpoint.Builder, com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder> 
+          getTargetFieldBuilder() {
+        if (targetBuilder_ == null) {
+          targetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.v2ray.core.common.net.DestinationProto.Endpoint, com.v2ray.core.common.net.DestinationProto.Endpoint.Builder, com.v2ray.core.common.net.DestinationProto.EndpointOrBuilder>(
+                  getTarget(),
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        return targetBuilder_;
+      }
+
+      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes payload = 3;</code>
+       */
+      public com.google.protobuf.ByteString getPayload() {
+        return payload_;
+      }
+      /**
+       * <code>optional bytes payload = 3;</code>
+       */
+      public Builder setPayload(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes payload = 3;</code>
+       */
+      public Builder clearPayload() {
+        
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:v2ray.core.app.proxyman.SessionFrame)
+    }
+
+    // @@protoc_insertion_point(class_scope:v2ray.core.app.proxyman.SessionFrame)
+    private static final com.v2ray.core.app.proxyman.ConfigProto.SessionFrame DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.v2ray.core.app.proxyman.ConfigProto.SessionFrame();
+    }
+
+    public static com.v2ray.core.app.proxyman.ConfigProto.SessionFrame getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SessionFrame>
+        PARSER = new com.google.protobuf.AbstractParser<SessionFrame>() {
+      public SessionFrame parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SessionFrame(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SessionFrame> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SessionFrame> getParserForType() {
+      return PARSER;
+    }
+
+    public com.v2ray.core.app.proxyman.ConfigProto.SessionFrame getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_v2ray_core_app_proxyman_InboundConfig_descriptor;
   private static final 
@@ -7035,6 +8714,21 @@ public final class ConfigProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_v2ray_core_app_proxyman_OutboundHandlerConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v2ray_core_app_proxyman_MultiplexingConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v2ray_core_app_proxyman_DispatchConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_v2ray_core_app_proxyman_SessionFrame_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7047,46 +8741,52 @@ public final class ConfigProto {
       "\n(v2ray.com/core/app/proxyman/config.pro" +
       "to\022\027v2ray.core.app.proxyman\0320v2ray.com/c" +
       "ore/common/serial/typed_message.proto\032\'v" +
-      "2ray.com/core/common/net/address.proto\032$" +
-      "v2ray.com/core/common/net/port.proto\032.v2" +
-      "ray.com/core/transport/internet/config.p" +
-      "roto\"\017\n\rInboundConfig\"\226\003\n\022AllocationStra" +
-      "tegy\022>\n\004type\030\001 \001(\01620.v2ray.core.app.prox" +
-      "yman.AllocationStrategy.Type\022^\n\013concurre" +
-      "ncy\030\002 \001(\0132I.v2ray.core.app.proxyman.Allo",
-      "cationStrategy.AllocationStrategyConcurr" +
-      "ency\022V\n\007refresh\030\003 \001(\0132E.v2ray.core.app.p" +
-      "roxyman.AllocationStrategy.AllocationStr" +
-      "ategyRefresh\032.\n\035AllocationStrategyConcur" +
-      "rency\022\r\n\005value\030\001 \001(\r\032*\n\031AllocationStrate" +
-      "gyRefresh\022\r\n\005value\030\001 \001(\r\",\n\004Type\022\n\n\006Alwa" +
-      "ys\020\000\022\n\n\006Random\020\001\022\014\n\010External\020\002\"\321\002\n\016Recei" +
-      "verConfig\0224\n\nport_range\030\001 \001(\0132 .v2ray.co" +
-      "re.common.net.PortRange\0221\n\006listen\030\002 \001(\0132" +
-      "!.v2ray.core.common.net.IPOrDomain\022H\n\023al",
-      "location_strategy\030\003 \001(\0132+.v2ray.core.app" +
-      ".proxyman.AllocationStrategy\022D\n\017stream_s" +
-      "ettings\030\004 \001(\0132+.v2ray.core.transport.int" +
-      "ernet.StreamConfig\022$\n\034receive_original_d" +
-      "estination\030\005 \001(\010\022 \n\030allow_passive_connec" +
-      "tion\030\006 \001(\010\"\246\001\n\024InboundHandlerConfig\022\013\n\003t" +
-      "ag\030\001 \001(\t\022A\n\021receiver_settings\030\002 \001(\0132&.v2" +
-      "ray.core.common.serial.TypedMessage\022>\n\016p" +
-      "roxy_settings\030\003 \001(\0132&.v2ray.core.common." +
-      "serial.TypedMessage\"\020\n\016OutboundConfig\"\310\001",
-      "\n\014SenderConfig\022.\n\003via\030\001 \001(\0132!.v2ray.core" +
-      ".common.net.IPOrDomain\022D\n\017stream_setting" +
-      "s\030\002 \001(\0132+.v2ray.core.transport.internet." +
-      "StreamConfig\022B\n\016proxy_settings\030\003 \001(\0132*.v" +
-      "2ray.core.transport.internet.ProxyConfig" +
-      "\"\306\001\n\025OutboundHandlerConfig\022\013\n\003tag\030\001 \001(\t\022" +
-      "?\n\017sender_settings\030\002 \001(\0132&.v2ray.core.co" +
-      "mmon.serial.TypedMessage\022>\n\016proxy_settin" +
-      "gs\030\003 \001(\0132&.v2ray.core.common.serial.Type" +
-      "dMessage\022\016\n\006expire\030\004 \001(\003\022\017\n\007comment\030\005 \001(",
-      "\tBN\n\033com.v2ray.core.app.proxymanB\013Config" +
-      "ProtoZ\010proxyman\252\002\027V2Ray.Core.App.Proxyma" +
-      "nb\006proto3"
+      "2ray.com/core/common/net/address.proto\032+" +
+      "v2ray.com/core/common/net/destination.pr" +
+      "oto\032$v2ray.com/core/common/net/port.prot" +
+      "o\032.v2ray.com/core/transport/internet/con" +
+      "fig.proto\"\017\n\rInboundConfig\"\226\003\n\022Allocatio" +
+      "nStrategy\022>\n\004type\030\001 \001(\01620.v2ray.core.app" +
+      ".proxyman.AllocationStrategy.Type\022^\n\013con",
+      "currency\030\002 \001(\0132I.v2ray.core.app.proxyman" +
+      ".AllocationStrategy.AllocationStrategyCo" +
+      "ncurrency\022V\n\007refresh\030\003 \001(\0132E.v2ray.core." +
+      "app.proxyman.AllocationStrategy.Allocati" +
+      "onStrategyRefresh\032.\n\035AllocationStrategyC" +
+      "oncurrency\022\r\n\005value\030\001 \001(\r\032*\n\031AllocationS" +
+      "trategyRefresh\022\r\n\005value\030\001 \001(\r\",\n\004Type\022\n\n" +
+      "\006Always\020\000\022\n\n\006Random\020\001\022\014\n\010External\020\002\"\321\002\n\016" +
+      "ReceiverConfig\0224\n\nport_range\030\001 \001(\0132 .v2r" +
+      "ay.core.common.net.PortRange\0221\n\006listen\030\002",
+      " \001(\0132!.v2ray.core.common.net.IPOrDomain\022" +
+      "H\n\023allocation_strategy\030\003 \001(\0132+.v2ray.cor" +
+      "e.app.proxyman.AllocationStrategy\022D\n\017str" +
+      "eam_settings\030\004 \001(\0132+.v2ray.core.transpor" +
+      "t.internet.StreamConfig\022$\n\034receive_origi" +
+      "nal_destination\030\005 \001(\010\022 \n\030allow_passive_c" +
+      "onnection\030\006 \001(\010\"\246\001\n\024InboundHandlerConfig" +
+      "\022\013\n\003tag\030\001 \001(\t\022A\n\021receiver_settings\030\002 \001(\013" +
+      "2&.v2ray.core.common.serial.TypedMessage" +
+      "\022>\n\016proxy_settings\030\003 \001(\0132&.v2ray.core.co",
+      "mmon.serial.TypedMessage\"\020\n\016OutboundConf" +
+      "ig\"\310\001\n\014SenderConfig\022.\n\003via\030\001 \001(\0132!.v2ray" +
+      ".core.common.net.IPOrDomain\022D\n\017stream_se" +
+      "ttings\030\002 \001(\0132+.v2ray.core.transport.inte" +
+      "rnet.StreamConfig\022B\n\016proxy_settings\030\003 \001(" +
+      "\0132*.v2ray.core.transport.internet.ProxyC" +
+      "onfig\"\306\001\n\025OutboundHandlerConfig\022\013\n\003tag\030\001" +
+      " \001(\t\022?\n\017sender_settings\030\002 \001(\0132&.v2ray.co" +
+      "re.common.serial.TypedMessage\022>\n\016proxy_s" +
+      "ettings\030\003 \001(\0132&.v2ray.core.common.serial",
+      ".TypedMessage\022\016\n\006expire\030\004 \001(\003\022\017\n\007comment" +
+      "\030\005 \001(\t\"%\n\022MultiplexingConfig\022\017\n\007enabled\030" +
+      "\001 \001(\010\"S\n\016DispatchConfig\022A\n\014mux_settings\030" +
+      "\001 \001(\0132+.v2ray.core.app.proxyman.Multiple" +
+      "xingConfig\"\\\n\014SessionFrame\022\n\n\002id\030\001 \001(\r\022/" +
+      "\n\006target\030\002 \001(\0132\037.v2ray.core.common.net.E" +
+      "ndpoint\022\017\n\007payload\030\003 \001(\014BN\n\033com.v2ray.co" +
+      "re.app.proxymanB\013ConfigProtoZ\010proxyman\252\002" +
+      "\027V2Ray.Core.App.Proxymanb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7101,6 +8801,7 @@ public final class ConfigProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.v2ray.core.common.serial.TypedMessageProto.getDescriptor(),
           com.v2ray.core.common.net.AddressProto.getDescriptor(),
+          com.v2ray.core.common.net.DestinationProto.getDescriptor(),
           com.v2ray.core.common.net.PortProto.getDescriptor(),
           com.v2ray.core.transport.internet.ConfigProto.getDescriptor(),
         }, assigner);
@@ -7158,8 +8859,27 @@ public final class ConfigProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v2ray_core_app_proxyman_OutboundHandlerConfig_descriptor,
         new java.lang.String[] { "Tag", "SenderSettings", "ProxySettings", "Expire", "Comment", });
+    internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_v2ray_core_app_proxyman_MultiplexingConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v2ray_core_app_proxyman_MultiplexingConfig_descriptor,
+        new java.lang.String[] { "Enabled", });
+    internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_v2ray_core_app_proxyman_DispatchConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v2ray_core_app_proxyman_DispatchConfig_descriptor,
+        new java.lang.String[] { "MuxSettings", });
+    internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_v2ray_core_app_proxyman_SessionFrame_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_v2ray_core_app_proxyman_SessionFrame_descriptor,
+        new java.lang.String[] { "Id", "Target", "Payload", });
     com.v2ray.core.common.serial.TypedMessageProto.getDescriptor();
     com.v2ray.core.common.net.AddressProto.getDescriptor();
+    com.v2ray.core.common.net.DestinationProto.getDescriptor();
     com.v2ray.core.common.net.PortProto.getDescriptor();
     com.v2ray.core.transport.internet.ConfigProto.getDescriptor();
   }

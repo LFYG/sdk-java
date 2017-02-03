@@ -209,19 +209,6 @@ public final class ConfigProto {
         int index);
 
     /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    boolean hasLog();
-    /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    com.v2ray.core.common.log.ConfigProto.Config getLog();
-    /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder getLogOrBuilder();
-
-    /**
      * <pre>
      * App configuration. Must be one in the app directory.
      * </pre>
@@ -338,23 +325,10 @@ public final class ConfigProto {
                   input.readMessage(com.v2ray.core.app.proxyman.ConfigProto.OutboundHandlerConfig.parser(), extensionRegistry));
               break;
             }
-            case 26: {
-              com.v2ray.core.common.log.ConfigProto.Config.Builder subBuilder = null;
-              if (log_ != null) {
-                subBuilder = log_.toBuilder();
-              }
-              log_ = input.readMessage(com.v2ray.core.common.log.ConfigProto.Config.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(log_);
-                log_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 app_ = new java.util.ArrayList<com.v2ray.core.common.serial.TypedMessageProto.TypedMessage>();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               app_.add(
                   input.readMessage(com.v2ray.core.common.serial.TypedMessageProto.TypedMessage.parser(), extensionRegistry));
@@ -387,7 +361,7 @@ public final class ConfigProto {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           outbound_ = java.util.Collections.unmodifiableList(outbound_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           app_ = java.util.Collections.unmodifiableList(app_);
         }
         makeExtensionsImmutable();
@@ -516,27 +490,6 @@ public final class ConfigProto {
       return outbound_.get(index);
     }
 
-    public static final int LOG_FIELD_NUMBER = 3;
-    private com.v2ray.core.common.log.ConfigProto.Config log_;
-    /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    public boolean hasLog() {
-      return log_ != null;
-    }
-    /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    public com.v2ray.core.common.log.ConfigProto.Config getLog() {
-      return log_ == null ? com.v2ray.core.common.log.ConfigProto.Config.getDefaultInstance() : log_;
-    }
-    /**
-     * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-     */
-    public com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder getLogOrBuilder() {
-      return getLog();
-    }
-
     public static final int APP_FIELD_NUMBER = 4;
     private java.util.List<com.v2ray.core.common.serial.TypedMessageProto.TypedMessage> app_;
     /**
@@ -631,9 +584,6 @@ public final class ConfigProto {
       for (int i = 0; i < outbound_.size(); i++) {
         output.writeMessage(2, outbound_.get(i));
       }
-      if (log_ != null) {
-        output.writeMessage(3, getLog());
-      }
       for (int i = 0; i < app_.size(); i++) {
         output.writeMessage(4, app_.get(i));
       }
@@ -654,10 +604,6 @@ public final class ConfigProto {
       for (int i = 0; i < outbound_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, outbound_.get(i));
-      }
-      if (log_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getLog());
       }
       for (int i = 0; i < app_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -687,11 +633,6 @@ public final class ConfigProto {
           .equals(other.getInboundList());
       result = result && getOutboundList()
           .equals(other.getOutboundList());
-      result = result && (hasLog() == other.hasLog());
-      if (hasLog()) {
-        result = result && getLog()
-            .equals(other.getLog());
-      }
       result = result && getAppList()
           .equals(other.getAppList());
       result = result && (hasTransport() == other.hasTransport());
@@ -716,10 +657,6 @@ public final class ConfigProto {
       if (getOutboundCount() > 0) {
         hash = (37 * hash) + OUTBOUND_FIELD_NUMBER;
         hash = (53 * hash) + getOutboundList().hashCode();
-      }
-      if (hasLog()) {
-        hash = (37 * hash) + LOG_FIELD_NUMBER;
-        hash = (53 * hash) + getLog().hashCode();
       }
       if (getAppCount() > 0) {
         hash = (37 * hash) + APP_FIELD_NUMBER;
@@ -862,15 +799,9 @@ public final class ConfigProto {
         } else {
           outboundBuilder_.clear();
         }
-        if (logBuilder_ == null) {
-          log_ = null;
-        } else {
-          log_ = null;
-          logBuilder_ = null;
-        }
         if (appBuilder_ == null) {
           app_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           appBuilder_.clear();
         }
@@ -922,15 +853,10 @@ public final class ConfigProto {
         } else {
           result.outbound_ = outboundBuilder_.build();
         }
-        if (logBuilder_ == null) {
-          result.log_ = log_;
-        } else {
-          result.log_ = logBuilder_.build();
-        }
         if (appBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
             app_ = java.util.Collections.unmodifiableList(app_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.app_ = app_;
         } else {
@@ -1035,14 +961,11 @@ public final class ConfigProto {
             }
           }
         }
-        if (other.hasLog()) {
-          mergeLog(other.getLog());
-        }
         if (appBuilder_ == null) {
           if (!other.app_.isEmpty()) {
             if (app_.isEmpty()) {
               app_ = other.app_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureAppIsMutable();
               app_.addAll(other.app_);
@@ -1055,7 +978,7 @@ public final class ConfigProto {
               appBuilder_.dispose();
               appBuilder_ = null;
               app_ = other.app_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000004);
               appBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getAppFieldBuilder() : null;
@@ -1718,129 +1641,12 @@ public final class ConfigProto {
         return outboundBuilder_;
       }
 
-      private com.v2ray.core.common.log.ConfigProto.Config log_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.v2ray.core.common.log.ConfigProto.Config, com.v2ray.core.common.log.ConfigProto.Config.Builder, com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder> logBuilder_;
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public boolean hasLog() {
-        return logBuilder_ != null || log_ != null;
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public com.v2ray.core.common.log.ConfigProto.Config getLog() {
-        if (logBuilder_ == null) {
-          return log_ == null ? com.v2ray.core.common.log.ConfigProto.Config.getDefaultInstance() : log_;
-        } else {
-          return logBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public Builder setLog(com.v2ray.core.common.log.ConfigProto.Config value) {
-        if (logBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          log_ = value;
-          onChanged();
-        } else {
-          logBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public Builder setLog(
-          com.v2ray.core.common.log.ConfigProto.Config.Builder builderForValue) {
-        if (logBuilder_ == null) {
-          log_ = builderForValue.build();
-          onChanged();
-        } else {
-          logBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public Builder mergeLog(com.v2ray.core.common.log.ConfigProto.Config value) {
-        if (logBuilder_ == null) {
-          if (log_ != null) {
-            log_ =
-              com.v2ray.core.common.log.ConfigProto.Config.newBuilder(log_).mergeFrom(value).buildPartial();
-          } else {
-            log_ = value;
-          }
-          onChanged();
-        } else {
-          logBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public Builder clearLog() {
-        if (logBuilder_ == null) {
-          log_ = null;
-          onChanged();
-        } else {
-          log_ = null;
-          logBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public com.v2ray.core.common.log.ConfigProto.Config.Builder getLogBuilder() {
-        
-        onChanged();
-        return getLogFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      public com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder getLogOrBuilder() {
-        if (logBuilder_ != null) {
-          return logBuilder_.getMessageOrBuilder();
-        } else {
-          return log_ == null ?
-              com.v2ray.core.common.log.ConfigProto.Config.getDefaultInstance() : log_;
-        }
-      }
-      /**
-       * <code>optional .v2ray.core.common.log.Config log = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.v2ray.core.common.log.ConfigProto.Config, com.v2ray.core.common.log.ConfigProto.Config.Builder, com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder> 
-          getLogFieldBuilder() {
-        if (logBuilder_ == null) {
-          logBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.v2ray.core.common.log.ConfigProto.Config, com.v2ray.core.common.log.ConfigProto.Config.Builder, com.v2ray.core.common.log.ConfigProto.ConfigOrBuilder>(
-                  getLog(),
-                  getParentForChildren(),
-                  isClean());
-          log_ = null;
-        }
-        return logBuilder_;
-      }
-
       private java.util.List<com.v2ray.core.common.serial.TypedMessageProto.TypedMessage> app_ =
         java.util.Collections.emptyList();
       private void ensureAppIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           app_ = new java.util.ArrayList<com.v2ray.core.common.serial.TypedMessageProto.TypedMessage>(app_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2034,7 +1840,7 @@ public final class ConfigProto {
       public Builder clearApp() {
         if (appBuilder_ == null) {
           app_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           appBuilder_.clear();
@@ -2139,7 +1945,7 @@ public final class ConfigProto {
           appBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.v2ray.core.common.serial.TypedMessageProto.TypedMessage, com.v2ray.core.common.serial.TypedMessageProto.TypedMessage.Builder, com.v2ray.core.common.serial.TypedMessageProto.TypedMessageOrBuilder>(
                   app_,
-                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
                   isClean());
           app_ = null;
@@ -2329,18 +2135,16 @@ public final class ConfigProto {
       "\n\033v2ray.com/core/config.proto\022\nv2ray.cor" +
       "e\032(v2ray.com/core/app/proxyman/config.pr" +
       "oto\0320v2ray.com/core/common/serial/typed_" +
-      "message.proto\032&v2ray.com/core/common/log" +
-      "/config.proto\032%v2ray.com/core/transport/" +
-      "config.proto\"\234\002\n\006Config\022>\n\007inbound\030\001 \003(\013" +
+      "message.proto\032%v2ray.com/core/transport/" +
+      "config.proto\"\366\001\n\006Config\022>\n\007inbound\030\001 \003(\013" +
       "2-.v2ray.core.app.proxyman.InboundHandle" +
       "rConfig\022@\n\010outbound\030\002 \003(\0132..v2ray.core.a" +
-      "pp.proxyman.OutboundHandlerConfig\022*\n\003log" +
-      "\030\003 \001(\0132\035.v2ray.core.common.log.Config\0223\n",
-      "\003app\030\004 \003(\0132&.v2ray.core.common.serial.Ty" +
-      "pedMessage\022/\n\ttransport\030\005 \001(\0132\034.v2ray.co" +
-      "re.transport.Config*&\n\014ConfigFormat\022\014\n\010P" +
-      "rotobuf\020\000\022\010\n\004JSON\020\001B0\n\016com.v2ray.coreB\013C" +
-      "onfigProtoZ\004core\252\002\nV2Ray.Coreb\006proto3"
+      "pp.proxyman.OutboundHandlerConfig\0223\n\003app" +
+      "\030\004 \003(\0132&.v2ray.core.common.serial.TypedM" +
+      "essage\022/\n\ttransport\030\005 \001(\0132\034.v2ray.core.t",
+      "ransport.ConfigJ\004\010\003\020\004*&\n\014ConfigFormat\022\014\n" +
+      "\010Protobuf\020\000\022\010\n\004JSON\020\001B0\n\016com.v2ray.coreB" +
+      "\013ConfigProtoZ\004core\252\002\nV2Ray.Coreb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2355,7 +2159,6 @@ public final class ConfigProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.v2ray.core.app.proxyman.ConfigProto.getDescriptor(),
           com.v2ray.core.common.serial.TypedMessageProto.getDescriptor(),
-          com.v2ray.core.common.log.ConfigProto.getDescriptor(),
           com.v2ray.core.transport.ConfigProto.getDescriptor(),
         }, assigner);
     internal_static_v2ray_core_Config_descriptor =
@@ -2363,10 +2166,9 @@ public final class ConfigProto {
     internal_static_v2ray_core_Config_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_v2ray_core_Config_descriptor,
-        new java.lang.String[] { "Inbound", "Outbound", "Log", "App", "Transport", });
+        new java.lang.String[] { "Inbound", "Outbound", "App", "Transport", });
     com.v2ray.core.app.proxyman.ConfigProto.getDescriptor();
     com.v2ray.core.common.serial.TypedMessageProto.getDescriptor();
-    com.v2ray.core.common.log.ConfigProto.getDescriptor();
     com.v2ray.core.transport.ConfigProto.getDescriptor();
   }
 
